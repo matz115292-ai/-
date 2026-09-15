@@ -1,0 +1,8 @@
+{
+  "name": "Remix Hjh",
+  "description": "شركة برق العقارية (BARQ REAL ESTATE) - نظام شامل لإدارة وتسجيل العقارات والعملاء ومطابقة العروض والطلبات العقارية مع نظام تنبيهات فوري لضمان سرعة التواصل وتحديث البيانات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

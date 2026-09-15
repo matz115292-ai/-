@@ -1,0 +1,92 @@
+{
+  "entities": {
+    "properties": {
+      "title": "العقارات",
+      "description": "قائمة العروض والوحدات العقارية المسجلة في النظام",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "referenceCode": { "type": "string" },
+        "type": { "type": "string" },
+        "purpose": { "type": "string" },
+        "price": { "type": "number" },
+        "area": { "type": "number" },
+        "city": { "type": "string" },
+        "neighborhood": { "type": "string" },
+        "status": { "type": "string" },
+        "ownerName": { "type": "string" },
+        "ownerPhone": { "type": "string" },
+        "marketerId": { "type": "string" },
+        "marketerName": { "type": "string" }
+      }
+    },
+    "clients": {
+      "title": "العملاء",
+      "description": "قاعدة بيانات طلبات العملاء والمشترين والمستأجرين",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "type": "string" },
+        "preferredTypes": { "type": "array" },
+        "preferredCities": { "type": "array" }
+      }
+    },
+    "appointments": {
+      "title": "المواعيد والمعاينات",
+      "description": "جدول زيارات ومعاينات العقارات",
+      "type": "object",
+      "properties": {
+        "propertyId": { "type": "string" },
+        "clientId": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "marketers": {
+      "title": "المسوقون",
+      "description": "سجل المسوقين والوكلاء العقاريين والعمولات",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "commissionRate": { "type": "number" }
+      }
+    },
+    "users": {
+      "title": "المستخدمون",
+      "description": "حسابات موظفي ومسؤولي النظام",
+      "type": "object",
+      "properties": {
+        "username": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/properties/{propertyId}": {
+      "schema": "properties",
+      "description": "قائمة العروض والوحدات العقارية"
+    },
+    "/clients/{clientId}": {
+      "schema": "clients",
+      "description": "قاعدة بيانات طلبات العملاء"
+    },
+    "/appointments/{appointmentId}": {
+      "schema": "appointments",
+      "description": "جدول مواعيد المعاينات"
+    },
+    "/marketers/{marketerId}": {
+      "schema": "marketers",
+      "description": "سجل المسوقين"
+    },
+    "/users/{userId}": {
+      "schema": "users",
+      "description": "حسابات المستخدمين والموظفين"
+    }
+  }
+}
